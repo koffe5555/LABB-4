@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LABB 4</title>
+    <style>
+        *
+        {
+            padding: 4px;
+        }
+        label {
+            display: block;
+        }
+        textarea {
+            display: block;
+        }
+        form {
+            width: 400px;
+        }
+        </style>
+</head>
+<body>
+    <div class="/register method=POST">
+    <form method="post" action="http://localhost:5000/postjson/"></form>
+    <label for="">
+        Betalsätt:
+        <select name="payment">
+            <option value="-1">Välj betalsätt:</option>
+            <option value="1">Kort</option>
+            <option value="1">Swish</option>
+            <option value="1">Kontant</option>
+        </select>
+    </label>
+    <label>
+        Förnamne:
+        <input type="text" name="f_name">
+    </label>
+    <label>
+        Efternamn:
+        <input type="text" name="e_name">
+    </label>
+    <label>
+        Adress:
+        <input type="text" name="adress">
+    </label>
+    <label>
+        Postnummer:
+        <input type="text" name="postnummer">
+    </label>
+    <label>
+        Ort:
+        <input type="text" name="ort">
+    </label>
+    <label>
+        Mobil:
+        <input type="text" name="mobil">
+    </label>
+    <label>
+        E-post:
+        <input type="email" name="epost">
+    </label>
+    <label>
+        Lösenord:
+        <input type="password" name="pass">
+    </label>
+    <label>
+        Erbjudanden via e-post: <input type="checkbox" name="erbjudanden" value="offers"/>
+    </label>
+    <p>Epost-format:
+        <label>Html: <input type="radio" name="format" value="html" /></label>
+        <label>Text: <input type="radio" name="format" value="text" /></label>
+    </p>
+    <label>
+        Dina kommentarer:
+        <textarea cols="20" rows="3" name="kommentar"></textarea>
+    </label>
+    <input type="button" class="submit" name="submit" value="Skicka"/>
+    </div>
+</body>
+</html>
