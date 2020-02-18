@@ -2,9 +2,9 @@ from flask import Flask, escape, request, jsonify, render_template
 import sqlite3
 
 
-conn = sqlite3.connect('user.db')
+#conn = sqlite3.connect('user.db')
 
-curs = conn.cursor()
+#curs = conn.cursor()
 #skapar table
 #curs.execute("""CREATE TABLE user (
 #    f_name text,
@@ -21,12 +21,12 @@ curs = conn.cursor()
 #curs.execute("INSERT INTO user VALUES ('Kristoffer','Palmgren','Ringen','76165','Borlange','0702602007','h19kripa@du.se','Hej')")
 
 #Hämtar allt(*) från db
-curs.execute("sELECT * FROM user")
+#curs.execute("SELECT * FROM user")
 #Hämtar allt i basen
-print(curs.fetchall())
+#print(curs.fetchall())
 
 #lägger in i databasen
-conn.commit()
+#conn.commit()
 
 
-curs.close()
+#curs.close()

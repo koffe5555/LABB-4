@@ -1,21 +1,31 @@
 import module
 import http.server
-from flask import Flask, render_template
-from flask import request
+from flask import Flask, render_template, jsonify, request
   
 app = Flask(__name__, template_folder="template")
 
-@app.route('/register', methods=['GET'])
+test = jsonify
+
+#@app.route('/hello/<name>')
+#def hello(name):
+#   return render_template('hello.html', name=name)
+
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/register', methods=['POST'])
+@app.route('/', methods=['GET'])
 def register():
     # debug in console
     print(request.form.values)
-    print(request.form.get('payment', 'Not set'))
     # send back to client
-    return 'The /register app.route works!' 
+    return render_template('index.html')
 
-app.run(host='0.0.0.0', port=8080)
+@app.route('/', methods=['POST'])
+def post():
+    print(request.form.values)
+    return render_template('test.html')
+
+app.run(host='0.0.0.0', port=5000)
+
 
